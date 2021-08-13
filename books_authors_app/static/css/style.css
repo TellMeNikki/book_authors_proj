@@ -1,0 +1,38 @@
+.navbar {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  background-image: url("../img/bg4.jpg");
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  height: 654px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.contenedor {
+  background: rgb(61, 59, 79, 0.6);
+  margin-top: 4rem;
+  margin-right: 3rem;
+  float: right;
+  width: 50%;
+  height: fit-content;
+}
+
+.seccionform {
+  float: right;
+  display: inline-flex;
+  float: right;
+  width: fit-content;
+  height: fit-content;
+}
+
+.btn {
+  border: none;
+  margin: 2rem 1.5rem;
+  -webkit-box-shadow: 2px 2px 5px #a2a29f;
+  -moz-box-shadow: 2px 2px 5px #9e9e9c;
+}

@@ -1,0 +1,28 @@
+.navbar {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+}
+
+.container-fluid {
+  margin: 0 auto;
+  background-image: url("../img/bg7.jpg");
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  height: 654px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.contenedor {
+  background: rgb(214, 207, 170, 0.6);
+  margin: 0 auto;
+  margin-top: 4rem;
+  width: 40%;
+  height: fit-content;
+}
+
+.btn {
+  width: 15rem;
+  margin: 1rem 0;
+  float: right;
+}

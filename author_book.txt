@@ -1,0 +1,127 @@
+ python manage.py makemigrations
+ python manage.py migrate
+
+In [1]: from books_authors_app.models import Book,Author
+
+In [2]: Book.objects.create(title='C Sharp', desc='Learning C# is a complete introduction to C# and object-oriented programming. You will learn about  
+   ...: the syntax and structure of the C# language, including operators, classes and interfaces, structs, arrays, and strings.')
+Out[2]: 1,C Sharp
+
+In [3]: Book.objects.create(title='Java', desc='JAVA Programming introduces the subject in a simple and lucid style. This book explains programmi 
+   ...: ng concepts and software development practices for solving problems in a clear and precise manner.')
+Out[3]: 2,Java
+
+In [4]: Book.objects.create(title='Python', desc='This book is designed to be used as a primary textbook for python course. This third edition of 
+   ...:  Python Programming keeps up the tradition of updating content with the latest in the market. ')
+Out[4]: 3,Python
+
+In [5]: Book.objects.create(title='PHP', desc='If you want to get started with PHP, this book is essential. Author David Sklar (PHP Cookbook) gui 
+   ...: des you through aspects of the language you need to build dynamic server-side websites, youll learn how to work with web servers, browser 
+   ...: s, databases, and web services.')
+Out[5]: 4,PHP
+
+In [6]: Book.objects.create(title='Ruby', desc='The Ruby Programming Language is the authoritative guide to Ruby and provides comprehensive cover 
+   ...: age of versions 1.8 and 1.9 of the language.')
+Out[6]: 5,Ruby
+
+In [7]: Author.objects.create(first_name='Jane', last_name='Austen')
+Out[7]: 1,Jane,Austen
+
+In [8]: Author.objects.create(first_name='Emily', last_name='Dickinson')
+Out[8]: 2,Emily,Dickinson
+
+In [9]: Author.objects.create(first_name='Fyodor', last_name='Dostoevksy')
+Out[9]: 3,Fyodor,Dostoevksy
+
+In [10]: Author.objects.create(first_name='William', last_name='Shakespeare')
+Out[10]: 4,William,Shakespeare
+
+In [11]: Author.objects.create(first_name='Lau', last_name='Tzu')
+Out[11]: 5,Lau,Tzu
+
+
+notes = models.TextField(default=notes here...")
+
+In [12]:  c = Book.objects.get(name='C Sharp')
+In [13]:  c.name ='C#'
+In [14]:  c.save()
+
+In [15]: c = Author.objects.get(id=4)
+In [16]: c.first_name ='Bill'
+In [17]: c.save()    ...:
+
+In [18]: this_book = Book.objects.get(id=1)
+    ...: this_author = Author.objects.get(id=1)
+    ...: this_author.books.add(this_book)
+
+In [19]: this_author = Author.objects.get(id=1)
+    ...: this_book = Book.objects.get(id=2)
+    ...: this_author.books.add(this_book)
+
+In [20]: this_author = Author.objects.get(id=2)
+    ...: this_book = Book.objects.get(id=1)
+    ...: this_author.books.add(this_book)
+
+In [21]: this_author = Author.objects.get(id=2)
+    ...: this_book = Book.objects.get(id=2)
+    ...: this_author.books.add(this_book)
+
+In [21]: this_author = Author.objects.get(id=2)
+    ...: this_book = Book.objects.get(id=3)
+    ...: this_author.books.add(this_book)
+
+In [22]: this_author = Author.objects.get(id=3)
+    ...: this_book = Book.objects.get(id=1)
+    ...: this_author.books.add(this_book)
+
+In [23]: this_author = Author.objects.get(id=3)
+    ...: this_book = Book.objects.get(id=2)
+    ...: this_author.books.add(this_book)
+
+In [24]: this_author = Author.objects.get(id=3)
+    ...: this_book = Book.objects.get(id=3)
+    ...: this_author.books.add(this_book)
+
+In [25]: this_author = Author.objects.get(id=3)
+    ...: this_book = Book.objects.get(id=4)
+    ...: this_author.books.add(this_book)
+
+In [26]: this_author = Author.objects.get(id=4)
+    ...: this_book = Book.objects.get(id=1)
+    ...: this_author.books.add(this_book)
+
+In [27]: this_author = Author.objects.get(id=4)
+    ...: this_book = Book.objects.get(id=2)
+    ...: this_author.books.add(this_book)
+
+In [28]: this_author = Author.objects.get(id=4)
+    ...: this_book = Book.objects.get(id=3)
+    ...: this_author.books.add(this_book)
+
+In [29]: this_author = Author.objects.get(id=4)
+    ...: this_book = Book.objects.get(id=4)
+    ...: this_author.books.add(this_book)
+
+In [30]: this_author = Author.objects.get(id=4)
+    ...: this_book = Book.objects.get(id=5)
+    ...: this_author.books.add(this_book)
+
+In [31]: this_book = Book.objects.get(id=3)
+    ...: this_book.authors.all()
+Out[31]: <QuerySet [2,Emily,Dickinson, 3,Fyodor,Dostoevksy, 4,bill,Shakespeare]>
+
+In [32]: this_book = Book.objects.get(id=3)
+    ...: this_author = Author.objects.get(id=2)
+    ...: this_book.authors.remove(this_author)
+
+In [33]: this_book = Book.objects.get(id=2)
+    ...: this_author = Author.objects.get(id=5)
+    ...: this_book.authors.add(this_author)
+
+In [34]: this_author = Author.objects.get(id=3)
+    ...: this_author.books.all()
+Out[34]: <QuerySet [1,C#, 2,Java, 3,Python, 4,PHP]>
+
+In [35]: this_book = Book.objects.get(id=5)
+    ...: this_book.authors.all()
+Out[35]: <QuerySet [4,bill,Shakespeare]>

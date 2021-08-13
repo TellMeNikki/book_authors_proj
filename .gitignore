@@ -1,0 +1,7 @@
+Lib/
+Include/
+Scripts/
+share/
+pyvenv.cfg
+__pycache__/
+migrations/
